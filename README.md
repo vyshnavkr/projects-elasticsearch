@@ -8,6 +8,7 @@ Step 1. Create Mysql database:
 
 2. Create Mysql table:
 .
+JHH
 
 	CREATE TABLE user(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), bio VARCHAR(100), father_name VARCHAR(20), creation_date_time datetime);
 
