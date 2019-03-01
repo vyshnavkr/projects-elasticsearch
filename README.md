@@ -1,24 +1,25 @@
 # projects-elasticsearch
 This repository contains several projects on ELK stack
 
-//create mysql database
-CREATE DATABASE elasticsearch;
+Step 1. Create Mysql database:
+	
+	CREATE DATABASE elasticsearch;
 
 
-//create mysql table
+2. Create Mysql table:
 
 	USE elasticsearch;
 	CREATE TABLE user(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), bio VARCHAR(100), father_name VARCHAR(20), creation_date_time datetime);
 
 
-//insert dummy values into mysql table
+Step 3. Insert dummy values into Mysql table:
 
 	INSERT INTO user (name, bio, father_name, creation_date_time) VALUES ("Vyshnav", "I am software engineer. I work on Java, Spring, AWS, ELK.", "Ramesh", '2019-02-22 09:00:26');
 	INSERT INTO user (name, bio, father_name, creation_date_time) VALUES ("Vysakh", "I am a data scientist. I work on machine learning, deep learning and Artificial Intelligence", "Ramesh", '2019-02-22 09:00:27');
 	INSERT INTO user (name, bio, father_name, creation_date_time) VALUES ("Vignesh", "I am a student. I work on nothing", "Ramesh", '2019-02-22 10:00:27');
 
 
-//configure logstash
+Step 4. Configure Logstash:
 
 	input {
 		jdbc {
@@ -49,23 +50,29 @@ CREATE DATABASE elasticsearch;
 	}
 
 
-//run elasticsearch
+Step 5. Run Elasticsearch server
 
 
-//run logstash using -> 
+Step 6. Run Logstash server using:
 	
 	bin\logstash -f logstash-config-project.conf
 
 
-//code backend in springboot
+Step 6. Code backend in Spring Boot:
 
+	//Maven project
+	Create new maven project 
+	Choose 'create a simple project'
+	
 	//pom
-	new maven project -> choose 'create a simple project'
-	pom -> parent, dependencies, properties, build
-	right click -> maven -> update
+	look at sorce code
+	(right click -> maven -> update)
 
 	//application.properties
-	look at code
+	look at sorce code
 	
 	//model-controller-service-repository
-	look at code
+	look at sorce code
+	
+	
+Step 7. Check APIs in Postman 
