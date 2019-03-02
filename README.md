@@ -1,8 +1,8 @@
 # projects-elasticsearch
 This repository contains several projects on ELK stack
 
-Step 0. Download and install Elasticsearch, Logstash and Kibana from their respective sites.
-        (Note: Make sure the directory in which these are installed contains no white space. eg: C://Program<white space>             Files)
+Step 0. Download and install Elasticsearch, Logstash and Kibana from their respective sites. <br/>
+  (Note: Make sure the directory in which these are installed contains no white space. eg: C://Program<white space>             Files)
 	
 PART 1: Real Time Syncing between Mysql and Elasticsearch
 
@@ -25,7 +25,7 @@ Step 3. Insert dummy values into Mysql table:
 	INSERT INTO user (name, bio, father_name, creation_date_time) VALUES ("Vignesh", "I am a student. I work on nothing", "Ramesh", '2019-02-22 10:00:27');
 ```
 
-Step 4. Configure Logstash:
+Step 4. Configure Logstash: <br/>
   Create a file called 'logstash-config-project.conf' with the below code. Save it inside logstash installation folder.
 
 ```
@@ -58,11 +58,11 @@ Step 4. Configure Logstash:
 	}
 ```
 
-Step 5. Run Elasticsearch server:
+Step 5. Run Elasticsearch server:<br/>
   Run the 'elasticsearch.bat' present inside 'bin' folder of elasticsearch installation folder.
 
 
-Step 6. Run Logstash server:
+Step 6. Run Logstash server: <br/>
   Open cmd from the parent of 'bin' folder of logstash installation folder. Type the following and press ENTER:
 ```	
 	bin\logstash -f logstash-config-project.conf
@@ -93,7 +93,7 @@ Step 7. Code backend in Spring Boot:
 	
 Step 8. Check APIs in Postman 
 
-Step 9. Run Kibana server in http://localhost:5601 and check APIs in it
+Step 9. Run Kibana server in http://localhost:5601 and use the following queries:
 ```
 	//kibana queries (copy paste all of them together under 'developer tools' section)
 	
