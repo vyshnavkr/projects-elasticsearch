@@ -1,6 +1,11 @@
 # projects-elasticsearch
 This repository contains several projects on ELK stack
 
+Step 0. Download and install Elasticsearch, Logstash and Kibana from their respective sites.
+        (Note: Make sure the directory in which these are installed contains no white space. eg: C://Program<white space>             Files)
+	
+PART 1: Real Time Syncing between Mysql and Elasticsearch
+
 Step 1. Create Mysql database:
 ```	
 	CREATE DATABASE elasticsearch;
@@ -21,6 +26,8 @@ Step 3. Insert dummy values into Mysql table:
 ```
 
 Step 4. Configure Logstash:
+  Create a file called 'logstash-config-project.conf' with the below code. Save it inside logstash installation folder.
+
 ```
 	input {
 		jdbc {
@@ -51,13 +58,18 @@ Step 4. Configure Logstash:
 	}
 ```
 
-Step 5. Run Elasticsearch server
+Step 5. Run Elasticsearch server:
+  Run the 'elasticsearch.bat' present inside 'bin' folder of elasticsearch installation folder.
 
 
-Step 6. Run Logstash server using:
+Step 6. Run Logstash server:
+  Open cmd from the parent of 'bin' folder of logstash installation folder. Type the following and press ENTER:
 ```	
 	bin\logstash -f logstash-config-project.conf
 ```
+
+
+PART 2: Searching data via SpringBoot-Postman or Kibana
 
 Step 7. Code backend in Spring Boot:
 ```
@@ -66,14 +78,14 @@ Step 7. Code backend in Spring Boot:
 	Choose 'create a simple project'
 	
 	//pom
-	look at sorce code
+	look at source code
 	(right click -> maven -> update)
 
 	//application.properties
-	look at sorce code
+	look at source code
 	
 	//model-controller-service-repository
-	look at sorce code
+	look at source code
 	
 	//run microservice
 	in cmd type 'mvn spring-boot:run' and press enter
@@ -83,7 +95,7 @@ Step 8. Check APIs in Postman
 
 Step 9. Run Kibana server in http://localhost:5601 and check APIs in it
 ```
-	//popular kibana queries
+	//kibana queries (copy paste all of them together under 'developer tools' section)
 	
 	GET _search
 	{
@@ -102,13 +114,13 @@ Step 9. Run Kibana server in http://localhost:5601 and check APIs in it
 	}
 
 
-	GET userexamplet_index/userexample/_search
+	GET userexample_index/userexample/_search
 	{
 	  "from" : 0, "size" : 100,
 	  "query": {
 	    "match": {
 	      "bio":{
-		"query": "artfcl intellgnc",
+		"query": "artfcial intellgnc",
 		"fuzziness": "2"
 	      }
 	    }
