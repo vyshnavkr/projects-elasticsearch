@@ -59,7 +59,7 @@ Step 6. Run Logstash server using:
 	bin\logstash -f logstash-config-project.conf
 ```
 
-Step 6. Code backend in Spring Boot:
+Step 7. Code backend in Spring Boot:
 ```
 	//Maven project
 	Create new maven project 
@@ -76,4 +76,6 @@ Step 6. Code backend in Spring Boot:
 	look at sorce code
 ```	
 	
-Step 7. Check APIs in Postman 
+Step 8. Check APIs in Postman 
+
+Step 9. Run Kibana server in http://localhost:5601 and check APIs in it
