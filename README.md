@@ -74,6 +74,9 @@ Step 7. Code backend in Spring Boot:
 	
 	//model-controller-service-repository
 	look at sorce code
+	
+	//run microservice
+	in cmd type 'mvn spring-boot:run' and press enter
 ```	
 	
 Step 8. Check APIs in Postman 
