@@ -79,3 +79,36 @@ Step 7. Code backend in Spring Boot:
 Step 8. Check APIs in Postman 
 
 Step 9. Run Kibana server in http://localhost:5601 and check APIs in it
+```
+	//popular kibana queries
+	
+	GET _search
+	{
+	  "from" : 0, "size" : 100,
+	  "query": {
+	    "match_all": {}
+	  }
+	}
+	
+	GET userexample_index/userexample/_search
+	{
+	  "from" : 0, "size" : 100,
+	  "query": {
+	    "match_all": {}
+	  }
+	}
+
+
+	GET userexamplet_index/userexample/_search
+	{
+	  "from" : 0, "size" : 100,
+	  "query": {
+	    "match": {
+	      "bio":{
+		"query": "artfcl intellgnc",
+		"fuzziness": "2"
+	      }
+	    }
+	  }
+	}
+```
