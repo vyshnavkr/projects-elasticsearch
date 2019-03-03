@@ -2,8 +2,7 @@
 This repository contains several projects on ELK stack
 
 Step 0. Download and install Elasticsearch, Logstash and Kibana from their respective sites. <br/>
-  Note: Make sure the directory in which these are installed contains no white space. eg: C://Program<white space>             Files
-	
+  Note: Make sure the directory in which these are installed contains no white space. eg: C://Program<white space>             Files</br>
 	
 PART 1: Real Time Syncing between Mysql and Elasticsearch
 
@@ -69,7 +68,7 @@ Step 6. Run Logstash server: <br/>
 	bin\logstash -f logstash-config-project.conf
 ```
 
-
+</br>
 
 PART 2: Searching data via SpringBoot-Postman or Kibana
 
