@@ -71,6 +71,8 @@ Step 6. Run Logstash server: <br/>
 
 PART 2: Searching data via SpringBoot-Postman or Kibana
 
+  Note: Other than the search methods/queries mentioned in the Kibana/repository class in Spring Boot here, thete are more to it. Kindly have a look at the official docs.
+
 Step 7. Code backend in Spring Boot:
 ```
 	//Maven project
@@ -127,3 +129,4 @@ Step 9. Run Kibana server in http://localhost:5601 and use the following queries
 	  }
 	}
 ```
+  Note: By default, Kibana connects to the Elasticsearch instance running on localhost. To connect to a different Elasticsearch instance, modify the Elasticsearch URL in the kibana.yml configuration file and restart Kibana. More info on https://www.elastic.co/guide/en/kibana/current/connect-to-elasticsearch.html
